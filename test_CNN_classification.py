@@ -26,13 +26,12 @@ t_test = loaddata['t_test'] # test target labels
 
 
 ## PARAMETERS
-residual_channels = 8
+residual_channels = 256
 filter_width = 5
-dilations = [1]
-input_channels = X[0][0].shape[2]
+dilations = [1, 1, 1, 1, 1, 1, 1]
+input_channels = x_test[0][0].shape[2]
 no_classes = 3
-postnet_channels= 8
-
+postnet_channels= 256
 
 S = model_convNet.CNET(name='S', 
                        input_channels=input_channels,
